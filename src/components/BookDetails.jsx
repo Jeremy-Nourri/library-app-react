@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
+import Markdown from "react-markdown";
 import { useParams, Link } from "react-router-dom";
 
 function BookDetail() {
@@ -41,7 +42,7 @@ function BookDetail() {
                     <div className="card-body text-left w-3/4">
                         <h2 className="card-title">{singleBook.title}</h2>
                         <p>Auteur : {author}</p>
-                        <p>{singleBook.description.value}</p>
+                        <p><Markdown >{singleBook.description}</Markdown> </p>
                     </div>
                 </article>
             )
